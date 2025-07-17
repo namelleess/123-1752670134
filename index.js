@@ -58,16 +58,29 @@ document.addEventListener("DOMContentLoaded", function() {
             (c.className = "gameTitle"), (c.textContent = t.name);
             const l = document.createElement("span");
             l.className = "playBlock";
-            const m = document.createElement("img");
-            (m.className = "gamePlayButton"),
-              (m.width = 33),
-              (m.height = 33),
-              (m.src = playButtonSrc),
-              (m.alt = "Play game button");
+            const m = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg",
+            );
+            m.setAttribute("class", "icon");
+            m.setAttribute("width", "33");
+            m.setAttribute("height", "33");
+
+            const use = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "use",
+            );
+            use.setAttributeNS(
+              "http://www.w3.org/1999/xlink",
+              "href",
+              playButtonName,
+            );
+
+            m.appendChild(use);
             const r = document.createElement("span");
             return (
               (r.className = "gamePlayText"),
-              (r.textContent = "Play now"),
+              (r.textContent = playNowText),
               l.appendChild(m),
               l.appendChild(r),
               d.appendChild(c),
@@ -96,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
             e.offers && e.offers.length > 0
               ? `casino.html?id=${e.offers[0].id}`
               : "/";
-          n += `\n      <div class="pygradientContainer">\n      <div class="payMethodRow payMethodRowContent">\n      <div class="payMethodItem payMethodItemImage">\n      <div class="payMethodItemContent">\n      <img \n      class="payMethodImage" \n      src="https://api.adkey-seo.com/storage/images/payments/${t.image || "default.png"}" \n      alt="${t.name || "Payment method"}" \n      width="120" \n      height="70"\n      onerror="this.src='./assets/images/placeholder.png'"\n      />\n      </div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent">${t.type || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent">${t.country || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent">${t.commission || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent payMethodItemWide">${t.processing_time || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent payMethodItemWide">${t.min_dep || "N/A"}</div>\n      </div>\n      <div class="payMethodItem payMethodItemDeposit">\n      <div class="payMethodItemContent">\n      <a class="payMethodLink" href="${a}" aria-label="Play game">\n      <span class="bonusButton-deposit btn btn--small">Deposit</span>\n      </a>\n      </div>\n      </div>\n      </div>\n      </div>\n      `;
+          n += `\n      <div class="pygradientContainer">\n      <div class="payMethodRow payMethodRowContent">\n      <div class="payMethodItem payMethodItemImage">\n      <div class="payMethodItemContent">\n      <img \n      class="payMethodImage" \n      src="https://api.adkey-seo.com/storage/images/payments/${t.image || "default.png"}" \n      alt="${t.name || "Payment method"}" \n      width="120" \n      height="70"\n      onerror="this.src='./assets/images/placeholder.png'"\n      />\n      </div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent">${t.type || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent">${t.country || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent">${t.commission || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent payMethodItemWide">${t.processing_time || "N/A"}</div>\n      </div>\n      <div class="payMethodItem">\n      <div class="payMethodItemContent payMethodItemWide">${t.min_dep || "N/A"}</div>\n      </div>\n      <div class="payMethodItem payMethodItemDeposit">\n      <div class="payMethodItemContent">\n      <a target="_blank" class="payMethodLink" href="${a}" aria-label="Play game">\n      <span class="bonusButton-deposit btn btn--small">Deposit</span>\n      </a>\n      </div>\n      </div>\n      </div>\n      </div>\n      `;
         }),
           (t.innerHTML = n);
       })(t),
@@ -112,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
             e.offers && e.offers.length > 0
               ? `casino.html?id=${e.offers[0].id}`
               : "/";
-          n += `\n      <div class="payMethodCardGroup">\n      <div class="payMethodCard">\n      <div class="payMethodCardPicture">\n      <img \n      class="payMethodCardImage" \n      src="https://api.adkey-seo.com/storage/images/payments/${t.image || "default.png"}" \n      alt="${t.name || "Payment method"}" \n      width="140" \n      height="64"\n      onerror="this.src='./assets/images/placeholder.png'"\n      />\n      <div class="payMethodCardDeposit">\n      <a href="${a}" aria-label="Play game">\n      <span class="bonusButton-deposit btn btn--small">Deposit</span>\n      </a>\n      </div>\n      </div>\n      <div class="payMethodCardContainer">\n      <div class="payMethodCardDescription">\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Type</div>\n      <div class="payMethodCardText">${t.type || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Country</div>\n      <div class="payMethodCardText">${t.country || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Commission</div>\n      <div class="payMethodCardText">${t.commission || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Processing time</div>\n      <div class="payMethodCardText">${t.processing_time || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Minimum deposit</div>\n      <div class="payMethodCardText">${t.min_dep || "N/A"}</div>\n      </div>\n      </div>\n      </div>\n      </div>\n      </div>\n      `;
+          n += `\n      <div class="payMethodCardGroup">\n      <div class="payMethodCard">\n      <div class="payMethodCardPicture">\n      <img \n      class="payMethodCardImage" \n      src="https://api.adkey-seo.com/storage/images/payments/${t.image || "default.png"}" \n      alt="${t.name || "Payment method"}" \n      width="140" \n      height="64"\n      onerror="this.src='./assets/images/placeholder.png'"\n      />\n      <div class="payMethodCardDeposit">\n      <a target="_blank" href="${a}" aria-label="Play game">\n      <span class="bonusButton-deposit btn btn--small">Deposit</span>\n      </a>\n      </div>\n      </div>\n      <div class="payMethodCardContainer">\n      <div class="payMethodCardDescription">\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Type</div>\n      <div class="payMethodCardText">${t.type || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Country</div>\n      <div class="payMethodCardText">${t.country || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Commission</div>\n      <div class="payMethodCardText">${t.commission || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Processing time</div>\n      <div class="payMethodCardText">${t.processing_time || "N/A"}</div>\n      </div>\n      <div class="payMethodCardBlock">\n      <div class="payMethodCardItem">Minimum deposit</div>\n      <div class="payMethodCardText">${t.min_dep || "N/A"}</div>\n      </div>\n      </div>\n      </div>\n      </div>\n      </div>\n      `;
         }),
           (t.innerHTML = n);
       })(n);
@@ -163,12 +176,13 @@ document.addEventListener("DOMContentLoaded", function() {
           s.appendChild(d);
         const c = document.createElement("a");
         (c.className = "cardButton"),
+          (c.target = "_blank"),
           (c.href = `casino.html?id=${e.id}`),
           c.setAttribute("aria-label", "Play game");
         const l = document.createElement("span");
         return (
           (l.className = "btn btn--medium"),
-          (l.textContent = "Claim Bonus"),
+          (l.textContent = topCasinoButtonText),
           c.appendChild(l),
           n.appendChild(a),
           n.appendChild(s),
@@ -221,21 +235,34 @@ document.addEventListener("DOMContentLoaded", function() {
           (p.id = `info-${e.id}`);
         const h = document.createElement("label");
         (h.className = "moreInfoLabel"), (h.htmlFor = `info-${e.id}`);
-        const u = document.createElement("img");
-        (u.className = "bonusDetailImage"),
-          (u.src = informationOutlineSrc),
-          (u.alt = "Show more info"),
-          h.appendChild(u),
-          r.appendChild(p),
-          r.appendChild(h);
+
+        const u = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        u.setAttribute("class", "icon");
+        u.setAttribute("width", "33");
+        u.setAttribute("height", "33");
+
+        const use = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "use",
+        );
+        use.setAttributeNS(
+          "http://www.w3.org/1999/xlink",
+          "href",
+          informationOutlineName,
+        );
+
+        u.appendChild(use);
+
+        h.appendChild(u), r.appendChild(p), r.appendChild(h);
         const f = document.createElement("div");
         f.className = "claimBonus";
         const g = document.createElement("a");
         (g.href = `casino.html?id=${e.id}`),
+          (g.target = "_blank"),
           g.setAttribute("aria-label", "Play game");
         const v = document.createElement("span");
         (v.className = "bonusButton btn btn--medium"),
-          (v.textContent = "Get The Bonus"),
+          (v.textContent = bonusDetailsButtonText),
           g.appendChild(v),
           f.appendChild(g),
           n.appendChild(a),
@@ -252,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function() {
         b.className = "bonusDetailsContainer";
         const E = document.createElement("p");
         (E.className = "bonusDetailsText bonusDetailsAmount"),
-          (E.textContent = "Maximum amount");
+          (E.textContent = maximumAmountText);
         const M = document.createElement("p");
         (M.className = "bonusDetailsContent"),
           (M.textContent = e.bonuses.amount),
@@ -264,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const I = document.createElement("div");
         I.className = "bonusDetailsContainer";
         const B = document.createElement("p");
-        (B.className = "bonusDetailsText"), (B.textContent = "Wager");
+        (B.className = "bonusDetailsText"), (B.textContent = wagerText);
         const k = document.createElement("p");
         (k.className = "bonusDetailsContent"),
           (k.textContent = e.wager),
@@ -276,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const $ = document.createElement("div");
         $.className = "bonusDetailsContainer";
         const D = document.createElement("p");
-        (D.className = "bonusDetailsText"), (D.textContent = "Bonus Code");
+        (D.className = "bonusDetailsText"), (D.textContent = bonusCodeText);
         const x = document.createElement("p");
         (x.className = "bonusDetailsContent"),
           (x.textContent = e.bonus_code),

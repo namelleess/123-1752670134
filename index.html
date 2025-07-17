@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <script src="./index.js"></script>
 
+    <link rel="manifest" href="./manifest.json">
+
       <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +52,7 @@
     <meta name="twitter:image:height" content="630">
     <link rel="icon" href="https://paf-casino-online.com/favicon.ico" type="image/x-icon" sizes="16x16">
     <meta name="language" content="en">
-    <link rel="apple-touch-icon" href="" sizes="96x96">
+    <link rel="apple-touch-icon" href="https://paf-casino-online.com/icons/icon-192x192.webp" sizes="96x96">
     <link rel="icon" href="https://paf-casino-online.com/icons/icon-192x192.webp" type="image/webp" sizes="192x192">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="casino, online casino, gambling, slots, table games">
@@ -65,6 +67,65 @@
   </head>
 
   <body>
+    <svg
+      style="display: none"
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 256 256"
+    >
+      <symbol id="minus-icon" viewBox="0 0 256 256">
+        <path
+          fill="#17d26a"
+          d="M228 128a12 12 0 0 1-12 12H40a12 12 0 0 1 0-24h176a12 12 0 0 1 12 12"
+        />
+      </symbol>
+    </svg>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 256 256"
+    >
+      <symbol id="plus-icon" viewBox="0 0 256 256">
+        <path
+          fill="#17d26a"
+          d="M228 128a12 12 0 0 1-12 12h-76v76a12 12 0 0 1-24 0v-76H40a12 12 0 0 1 0-24h76V40a12 12 0 0 1 24 0v76h76a12 12 0 0 1 12 12"
+        />
+      </symbol>
+    </svg>
+
+    <svg
+      width="33"
+      height="32"
+      viewBox="0 0 33 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="play-icon" viewBox="0 0 33 32">
+        <path
+          d="M16.8334 0.0786133C7.9606 0.0786133 0.767578 7.20678 0.767578 15.9998C0.767578 24.7929 7.9606 31.921 16.8334 31.921C25.7061 31.921 32.8992 24.7929 32.8992 15.9998C32.8992 7.20678 25.7061 0.0786133 16.8334 0.0786133ZM22.3861 16.8438L14.3532 21.8192C14.1907 21.9197 14.0059 21.9703 13.821 21.9703C13.6536 21.9703 13.4859 21.929 13.3342 21.8454C13.015 21.67 12.8169 21.3372 12.8169 20.9752V11.0244C12.8169 10.6625 13.015 10.3296 13.3342 10.1543C13.6533 9.97788 14.0436 9.98857 14.3532 10.1805L22.3861 15.1559C22.6796 15.3381 22.858 15.6568 22.858 15.9998C22.858 16.3428 22.6796 16.6616 22.3861 16.8438Z"
+          fill="#fb333d"
+        />
+      </symbol>
+    </svg>
+
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="information-outline" viewBox="0 0 20 20">
+        <path
+          d="M9 7H11V5H9V7ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C3.85752 17.9997 4.95991 18.7362 6.17317 19.2388C7.38642 19.7413 8.68678 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM9 15H11V9H9V15Z"
+          fill="#17d26a"
+        />
+      </symbol>
+    </svg>
+
     <div class="wrapper">
       <header class="header">
         <div class="headerBlock">
@@ -83,9 +144,9 @@
                       </option>
                 </select>
               </li>
-            <li class="nav__item"><a class="nav__link" href="casino.html?id=example-offer-id"
+            <li class="nav__item"><a class="nav__link" target="_blank" href="casino.html?id=example-offer-id"
               aria-label="Sign Up" id="navSignUp"> Sign Up </a></li>
-            <li class="nav__item nav__itemLarge"><a class="nav__link nav__linkLarge"
+            <li class="nav__item nav__itemLarge"><a class="nav__link nav__linkLarge" target="_blank"
               href="casino.html?id=example-offer-id" aria-label="Play Now" id="navPlayNow"> Play Now </a>
             </li>
           </ul>
@@ -101,7 +162,7 @@
                   <p class="heroText heroTextDesktop">Exclusive welcome offer of</p>
                   <p class="heroText heroTextMobile">Exclusive welcome bonus of</p>
                   <p class="heroText heroTextBonus" id="bonusText"></p>
-                </div><a class="heroLink" id="bonusLink" href="/" aria-label="Play game"><span
+                </div><a target="_blank" class="heroLink" id="bonusLink" href="/" aria-label="Play game"><span
                   class="heroButton btn btn--large">Claim Bonus</span></a>
               </div>
             </div>
@@ -163,6 +224,7 @@
                 <div class="advantagesDescription">
                   <h2 class="advantagesTitle title">Advantages</h2>
                   <ul class="advantagesList">
+                  <li class="providersGroup">Some text before list</li>
                       <li class="advantagesItem"><img class="advantagesStar" width="30" height="29"
                         src="./assets/images/advantages/star.png" alt="Casino advantages item" />
                         <p class="advantagesText">Legal and safe casino</p>
@@ -183,6 +245,7 @@
                         src="./assets/images/advantages/star.png" alt="Casino advantages item" />
                         <p class="advantagesText">Wide range of games</p>
                       </li>
+                    <li class="providersGroup">Some text after list</li>
                   </ul><a class="advantagesLink" id="advantagesLink" target="_blank" href="/" aria-label="Know more"><span
                     class="advantagesButton btn btn--large">Know more</span></a>
                 </div>
@@ -195,7 +258,7 @@
                       src="./assets/images/advantages/app-store.webp" alt="iOs App " title="Mobile App"/></a><a
                       href="/" id="googlePlayLink" aria-label="Play game" target="_blank"><img
                         class="advantagesStore" width="181" height="54" title="Mobile App"
-                        src="./assets/images/advantages/google-play.webp" alt="android App" /></a>
+                        src="./assets/images/advantages/google-play.webp" alt="android App Mobile App" /></a>
                   </div>
                 </div>
               </div>
@@ -206,7 +269,7 @@
               <div class="gamesBlock block">
                 <h2 class="gamesTitle title"><span>Popular Games</span></h2>
                 <div class="gamesGroup" id="gamesContainer"><!-- Games will be dynamically inserted here -->
-                </div><a class="gamesLink" id="allGamesLink" href="/" aria-label="All Games"><span
+                </div><a target="_blank" class="gamesLink" id="allGamesLink" href="/" aria-label="All Games"><span
                   class="gamesButton btn btn--large">All Games</span></a>
               </div>
             </div>
@@ -349,8 +412,8 @@
                 <div class="applicationGroup">
                   <div class="applicationColumn">
                     <p class="applicationDescription"> Application description </p>
-                    <div class="applicationStoreGroup"><a id="appStoreAppLink" href="/"
-                      aria-label="Play game" target="_blank"><img class="advantagesStore"
+                    <div class="applicationStoreGroup"><a target="_blank" id="appStoreAppLink" href="/"
+                      aria-label="Play game"><img class="advantagesStore"
                         width="181" height="53" src="./assets/images/advantages/app-store.webp"
                         alt="iOs App" /></a><a id="googlePlayAppLink" href="/"
                         aria-label="Play game" target="_blank"><img class="applicationStore"
@@ -385,14 +448,28 @@
           <div class="container">
             <div class="faqBlock block">
               <h2 class="faqTitle title"><span>Frequently Asked Questions</span></h2>
-              <div class="faqGroup"><input class="faqInput" type="checkbox" id="FAQ Question 1" /><label
-                class="faqLabel" for="FAQ Question 1"><span class="gradientContainer"> FAQ Question 1 </span></label>
+              <div class="faqGroup"><input class="faqInput" type="checkbox" id="faq_question_1"/><label
+                class="faqLabel" for="faq_question_1">
+
+    <svg class="faqIcon" width="24" height="24" aria-hidden="true">
+      <use class="plus" href="#plus-icon"></use>
+      <use class="minus" href="#minus-icon"></use>
+    </svg>
+
+                <span class="gradientContainer"> FAQ Question 1 </span></label>
                 <div class="faqContent">
                   <p>FAQ Answer 1</p>
                 </div>
               </div>
-              <div class="faqGroup"><input class="faqInput" type="checkbox" id="FAQ Question 2" /><label
-                class="faqLabel" for="FAQ Question 2"><span class="gradientContainer"> FAQ Question 2 </span></label>
+              <div class="faqGroup"><input class="faqInput" type="checkbox" id="faq_question_2"/><label
+                class="faqLabel" for="faq_question_2">
+
+    <svg class="faqIcon" width="24" height="24" aria-hidden="true">
+      <use class="plus" href="#plus-icon"></use>
+      <use class="minus" href="#minus-icon"></use>
+    </svg>
+
+                <span class="gradientContainer"> FAQ Question 2 </span></label>
                 <div class="faqContent">
                   <p>FAQ Answer 2</p>
                 </div>
@@ -570,10 +647,17 @@
         </div>
       </div>
     </footer>
-  </body>
 
   <script>
-    var playButtonSrc = "./assets/images/games/playButton.svg"
-    var informationOutlineSrc = "./assets/images/bonuses/information-outline.svg"
+      var playButtonName = "#play-icon";
+      var informationOutlineName =
+        "#information-outline";
+      var topCasinoButtonText = "Claim Bonus";
+      var bonusDetailsButtonText = "Get Bonus";
+      var playNowText = "Play now";
+      var maximumAmountText = "Maximum amount";
+      var wagerText = "Wager";
+      var bonusCodeText = "Bonus Code";
   </script>
+  </body>
 </html>

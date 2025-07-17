@@ -70,6 +70,9 @@
 .btn--large {
   border-radius: 6.25rem;
   line-height: 1.6;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -235,6 +238,7 @@ body.overflow {
   --hero-title-text: #222829;
   --yellow: #17d26a;
   --yellow-button: #fb333d;
+  --welcome-bonus-bg: #deeadf;
   --button-text: #ffffff;
   --border-color: #efefdc;
   --casino-cards: #deeadf;
@@ -247,7 +251,8 @@ body.overflow {
   --bg-footer: #25ac61;
   --copyright: #e7e7d5;
   --link-hover: #222829;
-  --icon-color: 
+  --icon-color: ;
+  --top-games-hover-bg: #deeadf;
 }
 .loader-body {
   width: 100%;
@@ -273,7 +278,7 @@ body.overflow {
   0%,
   100% {
     transform: scale(0.8);
-    box-shadow: 0 0 0 1.25rem #25ac61;
+    box-shadow: 0 0 0 1.25rem var(--yellow);
   }
   70% {
     transform: scale(1);
@@ -283,10 +288,10 @@ body.overflow {
 .loader {
   width: 6.25rem;
   height: 6.25rem;
-  border: 0.75rem solid #fb333d;
+  border: 0.75rem solid var(--yellow-button);
   border-radius: 50%;
   position: absolute;
-  border-top-color: #25ac61;
+  border-top-color: var(--yellow);
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -694,7 +699,7 @@ body.overflow {
 .heroContainer {
   max-width: 100%;
   width: 100%;
-  background: var(--casino-cards);
+  background: var(--welcome-bonus-bg);
   position: relative;
   z-index: 0;
 }
@@ -760,7 +765,7 @@ body.overflow {
   display: block;
   width: 18.125rem;
 }
-.heroButton {
+.heroButton, .gamesButton, .advantagesButton, .bonusDetailsButton, .topCasinoButton {
   width: 18.125rem;
   font-size: 1.75rem;
 }
@@ -847,7 +852,7 @@ body.overflow {
     position: relative;
     left: 0;
   }
-  .heroButton {
+  .heroButton, .gamesButton, .advantagesButton, .bonusDetailsButton, .topCasinoButton {
     font-size: 1.5rem;
     width: 16.375rem;
     height: 4.8125rem;
@@ -948,12 +953,6 @@ body.overflow {
     position: relative;
     left: 0;
   }
-  .heroButton {
-    font-size: 1rem;
-    line-height: 1;
-    width: 12rem;
-    height: 3rem;
-  }
   .heroTitle {
     margin-top: 0;
     max-width: 22.75rem;
@@ -966,6 +965,14 @@ body.overflow {
     min-height: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  .heroButton, .gamesButton, .advantagesButton, .bonusDetailsButton, .topCasinoButton {
+    font-size: 1rem;
+    line-height: 1;
+    width: 12rem !important;
+    height: 3rem;
+
+    margin 0 auto;
   }
 }
 .cardBonus,
@@ -1187,10 +1194,6 @@ body.overflow {
     justify-content: center;
     align-items: center;
     margin-top: 0;
-  }
-  .topCasinoButton {
-    width: 15rem;
-    height: 4.8125rem;
   }
 }
 @media (max-width: 33.125rem) {
@@ -1702,10 +1705,6 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
   }
   .bonusDetailsButton {
     margin-left: auto;
-    width: 15rem;
-    height: 4.8125rem;
-    font-size: 1.5rem;
-    line-height: 1;
   }
   .bonusTableRow .bonusTableHead .bonusHeaderTextSpins {
     padding-left: 0.2rem;
@@ -1760,11 +1759,6 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
   }
   .advantagesLink {
     max-width: 15.5625rem;
-  }
-  .advantagesButton {
-    height: 4.8125rem;
-    font-size: 1.5rem;
-    line-height: 1.21;
   }
   .advantagesStoreGroup {
     flex-direction: row;
@@ -1827,7 +1821,7 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
   top: 0;
   left: 0;
   transition: 0.5s ease-in-out;
-  background: var(--casino-cards);
+  background: var(--top-games-hover-bg);
   width: 16.5rem;
   height: 8.875rem;
   color: var(--text);
@@ -2063,7 +2057,7 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
 @media (max-width: 36rem) {
   .gameTitle,
   .gamesLink span {
-    font-size: 1.5rem;
+    margin 0 auto;
   }
   .gamesBlock {
     padding-top: 7rem;
@@ -2091,11 +2085,6 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
   .gamesLink {
     margin-left: auto;
     width: 15rem;
-  }
-  .gamesLink span {
-    width: 15rem;
-    height: 4.8125rem;
-    line-height: 1;
   }
   .historyCircleContainer {
     background: var(--bg-light);
@@ -2796,12 +2785,6 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
     width: 15rem;
     max-width: 15rem;
   }
-  .advantagesButton {
-    margin-left: 0;
-    margin-right: auto;
-    width: 15rem;
-    height: 4.5rem;
-  }
   .advantagesStoreGroup {
     flex-wrap: wrap;
     align-self: center;
@@ -2892,15 +2875,20 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
   height: auto;
   width: 100%;
 }
-.faqLabel::before {
-  background: url("./assets/icons/faq/ph--plus-bold.svg") center/auto 100%
-    no-repeat;
-  align-items: center;
+.faqIcon {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
 }
-.faqInput:checked + .faqLabel::before {
-  background: url("./assets/icons/faq/ph--minus-bold.svg") center/auto 100%
-    no-repeat;
-  align-items: center;
+.faqIcon .minus {
+  display: none;
+}
+.faqInput:checked + .faqLabel .plus {
+  display: none;
+}
+.faqInput:checked + .faqLabel .minus {
+  display: inline;
 }
 .faqContent {
   padding: 0.625rem 2.375rem 1.5rem 0;
@@ -3371,9 +3359,9 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
 margin-top: 8px;
   }
   .nav__linkLarge {
-width: 7rem;
-font-size: 16px;
-    padding: 0.5rem;
+        width: 6.2rem;
+        font-size: 10px;
+        padding: 0.7rem;
   }
   .advantages,
   .advantagesTitle {

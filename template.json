@@ -514,6 +514,20 @@
           "default": "#25ac61"
         },
         {
+          "id": "welcome-bonus-bg",
+          "name": "Фон Welcome Bonus",
+          "description": "Для блока Welcome Bonus",
+          "type": "color",
+          "default": "#deeadf"
+        },
+        {
+          "id": "top-games-hover-bg",
+          "name": "Фон Games Hover",
+          "description": "Для блока Games Hover",
+          "type": "color",
+          "default": "#deeadf"
+        },
+        {
           "id": "main-bg",
           "name": "Фон 2",
           "description": "Для блоков Top Casino, Bonuses...",
@@ -840,6 +854,13 @@
       "name": "Top Casino Section",
       "fields": [
         {
+          "id": "topCasinoButtonText",
+          "name": "Top Casino Button Text",
+          "type": "text",
+          "description": "Text for top casino buttons",
+          "default": "Claim Bonus"
+        },
+        {
           "id": "title",
           "name": "Section Title",
           "type": "text",
@@ -865,6 +886,31 @@
           "type": "text",
           "description": "The title of the bonus details section",
           "default": "Bonus Details"
+        },
+        {
+          "id": "getBonusButtonText",
+          "name": "Get Bonus Button Text",
+          "type": "text",
+          "description": "Text for get bonus button",
+          "default": "Get Bonus"
+        },
+        {
+          "id": "maximumAmountText",
+          "name": "Maximum Amount Text",
+          "type": "text",
+          "default": "Maximum amount"
+        },
+        { 
+          "id": "wagerText",
+          "name": "Wager Text",
+          "type": "text",
+          "default": "Wager"
+        },
+        { 
+          "id": "bonusCodeText",
+          "name": "Bonus Code Text",
+          "type": "text",
+          "default": "Bonus Code"
         },
         {
           "id": "casino",
@@ -929,6 +975,13 @@
           "default": "Advantages"
         },
         {
+          "id": "advantagesBeforeText",
+          "name": "Advantages Before Text",
+          "type": "textarea",
+          "description": "Text for advantages before list",
+          "default": "Some text before list"
+        },
+        {
           "id": "items",
           "name": "Advantage Items",
           "type": "array",
@@ -946,6 +999,13 @@
             "No wagering bonus",
             "Wide range of games"
           ]
+        },
+        {
+          "id": "advantagesAfterText",
+          "name": "Advantages After Text",
+          "type": "textarea",
+          "description": "Text for advantages after list",
+          "default": "Some text after list"
         },
         {
           "id": "knowMore",
@@ -974,6 +1034,18 @@
           "type": "text",
           "description": "Alt text for the mobile app image",
           "default": "Mobile App"
+        },
+        {
+          "id": "mobileGooglePlayImageTitle",
+          "name": "Mobile Google Play Image title",
+          "type": "text",
+          "default": "Mobile App"
+        },
+        {
+          "id": "mobileIosImageTitle",
+          "name": "Mobile Ios Image Title",
+          "type": "text",
+          "default": "Mobile App"
         }
       ]
     },
@@ -981,6 +1053,13 @@
       "id": "games",
       "name": "Games Section",
       "fields": [
+        {
+          "id": "playNowText",
+          "name": "Play Now Text",
+          "type": "text",
+          "description": "Text for play now button",
+          "default": "Play now"
+        },
         {
           "id": "title",
           "name": "Section Title",
@@ -1799,5 +1878,10 @@
       ]
     }
   ],
-  "additionalBuildFiles": ["index.css", "normalize.css", "index.js"]
+  "additionalBuildFiles": [
+    "index.css",
+    "normalize.css",
+    "index.js",
+    "manifest.json"
+  ]
 }

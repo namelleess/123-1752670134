@@ -3,6 +3,8 @@
         "styles": {
             "bg": "#f3f4f1",
             "bg-light": "#25ac61",
+            "welcome-bonus-bg": "#deeadf",
+            "top-games-hover-bg": "#deeadf",
             "main-bg": "#f3f4f1",
             "text": "#222829",
             "text-black": "#ffffff",
@@ -63,11 +65,16 @@
             "mobileImage": "https:\/\/paf-casino-online.com\/images\/hero-mobile.webp"
         },
         "topCasino": {
+            "topCasinoButtonText": "Claim Bonus",
             "title": "Top Casino",
             "allCasino": "All Casino"
         },
         "bonusDetails": {
             "title": "Bonus Details",
+            "getBonusButtonText": "Get Bonus",
+            "maximumAmountText": "Maximum amount",
+            "wagerText": "Wager",
+            "bonusCodeText": "Bonus Code",
             "casino": "Casino",
             "bonuses": "Bonuses",
             "rate": "Rate",
@@ -78,6 +85,7 @@
         },
         "advantages": {
             "title": "Advantages",
+            "advantagesBeforeText": "Some text before list",
             "items": [
                 "Legal and safe casino",
                 "Quick registration",
@@ -85,12 +93,16 @@
                 "No wagering bonus",
                 "Wide range of games"
             ],
+            "advantagesAfterText": "Some text after list",
             "knowMore": "Know more",
             "appTitle": "Mobile App",
             "mobile": "https:\/\/paf-casino-online.com\/_next\/image?url=%2F_next%2Fstatic%2Fmedia%2Fmobile.cd4410fa.webp&w=384&q=75",
-            "mobileAlt": "Mobile App"
+            "mobileAlt": "Mobile App",
+            "mobileGooglePlayImageTitle": "Mobile App",
+            "mobileIosImageTitle": "Mobile App"
         },
         "games": {
+            "playNowText": "Play now",
             "title": "Popular Games",
             "allGames": "All Games"
         },
@@ -258,6 +270,8 @@
         "styles": {
             "bg": "#f3f4f1",
             "bg-light": "#25ac61",
+            "welcome-bonus-bg": "#deeadf",
+            "top-games-hover-bg": "#deeadf",
             "main-bg": "#f3f4f1",
             "text": "#222829",
             "text-black": "#ffffff",
@@ -318,11 +332,16 @@
             "mobileImage": "https:\/\/paf-casino-online.com\/images\/hero-mobile.webp"
         },
         "topCasino": {
+            "topCasinoButtonText": "Claim Bonus",
             "title": "Top Casino",
             "allCasino": "All Casino"
         },
         "bonusDetails": {
             "title": "Bonus Details",
+            "getBonusButtonText": "Get Bonus",
+            "maximumAmountText": "Maximum amount",
+            "wagerText": "Wager",
+            "bonusCodeText": "Bonus Code",
             "casino": "Casino",
             "bonuses": "Bonuses",
             "rate": "Rate",
@@ -333,6 +352,7 @@
         },
         "advantages": {
             "title": "Advantages",
+            "advantagesBeforeText": "Some text before list",
             "items": [
                 "Legal and safe casino",
                 "Quick registration",
@@ -340,12 +360,16 @@
                 "No wagering bonus",
                 "Wide range of games"
             ],
+            "advantagesAfterText": "Some text after list",
             "knowMore": "Know more",
             "appTitle": "Mobile App",
             "mobile": "https:\/\/paf-casino-online.com\/_next\/image?url=%2F_next%2Fstatic%2Fmedia%2Fmobile.cd4410fa.webp&w=384&q=75",
-            "mobileAlt": "Mobile App"
+            "mobileAlt": "Mobile App",
+            "mobileGooglePlayImageTitle": "Mobile App",
+            "mobileIosImageTitle": "Mobile App"
         },
         "games": {
+            "playNowText": "Play now",
             "title": "Popular Games",
             "allGames": "All Games"
         },
