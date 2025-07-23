@@ -507,6 +507,12 @@
           "default": "#f3f4f1"
         },
         {
+          "id": "lang-select-color",
+          "name": "Цвет выбора языка",
+          "type": "color",
+          "default": "#222829"
+        },
+        {
           "id": "bg-light",
           "name": "Фон 1",
           "description": "Для блоков Advantages, History...",
@@ -521,8 +527,8 @@
           "default": "#deeadf"
         },
         {
-          "id": "top-games-hover-bg",
-          "name": "Фон Games Hover",
+          "id": "top-games-hover-fg",
+          "name": "Текст Games Hover",
           "description": "Для блока Games Hover",
           "type": "color",
           "default": "#deeadf"
@@ -643,6 +649,12 @@
           "name": "Авторское право цвет текста",
           "type": "color",
           "default": "#e7e7d5"
+        },
+        {
+          "id": "starColor",
+          "name": "Цвет иконки звезды",
+          "type": "color",
+          "default": "#17d26a"
         },
         {
           "id": "baseFont",
@@ -900,13 +912,13 @@
           "type": "text",
           "default": "Maximum amount"
         },
-        { 
+        {
           "id": "wagerText",
           "name": "Wager Text",
           "type": "text",
           "default": "Wager"
         },
-        { 
+        {
           "id": "bonusCodeText",
           "name": "Bonus Code Text",
           "type": "text",
@@ -1300,6 +1312,12 @@
           "type": "text",
           "description": "The title of the payment method section",
           "default": "Payment Methods"
+        },
+        {
+          "id": "paymentMethodsButtonText",
+          "name": "Payment Methods Button Text",
+          "type": "text",
+          "default": "Deposit"
         },
         {
           "id": "method",
