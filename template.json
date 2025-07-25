@@ -885,6 +885,13 @@
           "type": "text",
           "description": "Text for all casino button",
           "default": "All Casino"
+        },
+        {
+          "id": "welcomeBonusText",
+          "name": "Welcome Bonus Text",
+          "type": "text",
+          "description": "Text for welcome bonus",
+          "default": "Welcome bonus"
         }
       ]
     },
